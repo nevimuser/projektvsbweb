@@ -1,0 +1,236 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+table {
+    margin: 0 auto;
+}
+body {
+    background-image: url(../obrazky/pozadi.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    max-height: 1000px;
+    font-family: Arial, sans-serif;
+}
+nav {
+    width: 100%;
+    height: 35px;
+    background-color: #4E4CF0;
+    color: white;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+#ad-left {
+    width: 10%; 
+    height: 100vh;
+    background-image: url("../obrazky/reklama.jpg");
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+#ad-right {
+    width: 10%; 
+    height: 100vh;
+    background-image: url("../obrazky/reklama.jpg");
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1;
+}
+
+nav p {
+    font-size: 24px;
+    line-height: 60px;
+    padding: 0 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    color: white;
+    font-size: 14px;
+    text-decoration: none;
+    padding: 22px 14px;
+    display: block;
+}
+
+nav ul li ul {
+    display: none;
+    position: absolute;
+    background-color: white;
+    padding: 10px;
+    border-radius: 0 0 4px 4px;
+}
+
+nav ul li:hover ul {
+    display: block;
+}
+
+nav ul li ul li {
+    width: 101px;
+    border-radius: 4px;
+}
+
+nav ul li ul li a {
+    padding: 8px 14px;
+    color: black;
+}
+
+nav ul li ul li a:hover {
+    background-color: grey;
+    color: black;
+}
+
+
+
+#pozadi {
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 600px;
+    background-color: white;
+}
+
+#pozadi h1 {
+    color: gray;
+    margin-bottom: 20px;
+}
+
+.auto{
+	height: 70%;
+	width: 70%
+	
+}
+
+.ppozadi {
+    text-align: left;
+}
+
+table.auto {
+    margin: 0 auto;
+}
+fieldset {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+	
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+}
+
+input[type="submit"] {
+    background-color: #4E4CF0;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #3333AA;
+}
+
+.burger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 3;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 6px 0;
+}
+
+@media only screen and (max-width: 600px) {
+	#pozadi {
+    text-align: center;
+    margin: 10px auto;
+    padding: 20px;
+    max-width: 600px;
+    background-color: white;
+}
+	
+    .burger {
+        display: flex;
+		top:0;
+		
+    }
+	
+	nav{
+		height: 45px;
+		width: 50px;
+	}
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: fixed;
+        top: 60px;
+        left: 0;
+        background-color: #4E4CF0;
+        z-index: 2;
+    }
+
+    #menu-toggle:checked + .burger + nav ul {
+        display: flex;
+    }
+
+    nav ul li {
+        margin-bottom: 5px;
+        text-align: center;
+    }
+
+    nav p {
+        display: none;
+    }
+	    #pozadi {
+        padding: 10px; 
+    }
+
+    label, input[type="text"], textarea {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    input[type="submit"] {
+        width: 100%;
+        box-sizing: border-box;
+        display: block;
+        margin-top: 10px; 
+    }
+
+}

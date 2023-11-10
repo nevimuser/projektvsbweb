@@ -1,0 +1,266 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-image: url(../obrazky/pozadi.jpg);
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+            max-height: 1000px;
+            font-family: Arial, sans-serif;
+        }
+
+        .auto {
+            height: 70%;
+            width: 70%;
+        }
+
+nav {
+    width: 100%;
+    height: 35px;
+    background-color: #4E4CF0;
+    color: white;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+        #ad-left {
+            width: 10%;
+            height: 100vh;
+            background-image: url("../obrazky/reklama.jpg");
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+
+        #ad-right {
+            width: 10%;
+            height: 100vh;
+            background-image: url("../obrazky/reklama.jpg");
+            position: fixed;
+            top: 0;
+            right: 0;
+            z-index: 1;
+        }
+
+        nav p {
+            font-size: 24px;
+            line-height: 60px;
+            padding: 0 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            position: relative;
+        }
+
+        nav ul li a {
+            color: white;
+            font-size: 14px;
+            text-decoration: none;
+            padding: 22px 14px;
+            display: block;
+        }
+
+        nav ul li ul {
+            display: none;
+            position: absolute;
+            background-color: white;
+            padding: 10px;
+            border-radius: 0 0 4px 4px;
+        }
+
+        nav ul li:hover ul {
+            display: block;
+        }
+
+        nav ul li ul li {
+            width: 101px;
+            border-radius: 4px;
+        }
+
+        nav ul li ul li a {
+            padding: 8px 14px;
+            color: black;
+        }
+
+        nav ul li ul li a:hover {
+            background-color: grey;
+            color: black;
+        }
+
+        #pozadi {
+            text-align: center;
+            margin: auto;
+            padding: 10px;
+            background-color: rgb(192, 192, 192);
+            width: 40%;
+        }
+
+        h1 {
+            color: gray;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .category {
+            position: relative;
+        }
+
+        .auto-text {
+            display: none;
+            color: black;
+            padding: 10px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            text-align: center;
+            line-height: 180px;
+        }
+
+        .category:hover .auto-text {
+            display: block;
+        }
+
+        .category:hover img {
+            opacity: 0.5;
+        }
+
+        #video-container {
+            margin: 20px auto;
+            max-width: 800px;
+        }
+
+        #footer-info {
+            text-align: center;
+            background-color: #4E4CF0;
+            color: white;
+            padding: 10px;
+        }
+
+        #name,
+        #validator-link {
+            margin: 0 auto;
+            max-width: 600px;
+        }
+
+        #validator-link a {
+            color: white;
+            text-decoration: none;
+        }
+
+        #validator-link a:hover {
+            text-decoration: underline;
+        }
+
+        .ad-container {
+            width: 10%;
+            height: 100vh;
+            background-image: url("../obrazky/reklama.jpg");
+            position: fixed;
+            z-index: 1;
+        }
+
+.burger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 3;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 6px 0;
+}
+
+@media only screen and (max-width: 600px) {
+	#pozadi {
+    text-align: center;
+    margin: 10px auto;
+    padding: 20px;
+    max-width: 600px;
+    background-color: white;
+}
+	
+    .burger {
+        display: flex;
+		top:0;
+		
+    }
+	
+	nav{
+		height: 45px;
+	}
+
+            .bar {
+                width: 25px;
+                height: 3px;
+                background-color: white;
+                margin: 6px 0;
+            }
+			
+
+            nav ul {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                position: absolute;
+                background-color: #4E4CF0;
+                z-index: 1;
+            }
+
+            #menu-toggle:checked+.burger+nav ul {
+                display: flex;
+            }
+
+            nav ul li {
+                margin-bottom: 5px;
+                text-align: center;
+            }
+
+            nav p {
+                display: none;
+            }
+
+            label {
+                display: none;
+            }
+
+            #ad-left,
+            #ad-right {
+                width: 100%;
+                height: auto;
+                position: static;
+                z-index: 1;
+            }
+
+            #ad-left,
+            #ad-right img {
+                width: 100%;
+                height: auto;
+            }
+
+            #pozadi {
+                width: 80%;
+            }
+        }
