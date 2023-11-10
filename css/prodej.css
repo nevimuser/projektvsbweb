@@ -12,6 +12,7 @@ body {
     background-size: cover;
     background-position: center;
     max-height: 1000px;
+	width: 100%;
     font-family: Arial, sans-serif;
 }
 nav {
