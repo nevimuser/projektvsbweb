@@ -10,7 +10,6 @@
             background-size: cover;
             background-position: center;
             max-height: 1000px;
-			max-width: inherit;
             font-family: Arial, sans-serif;
         }
 
@@ -194,7 +193,7 @@ nav {
     margin: 6px 0;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 600px) {
 	#pozadi {
     text-align: center;
     margin: 10px auto;
@@ -202,7 +201,6 @@ nav {
     max-width: 600px;
     background-color: white;
 }
-	
     .burger {
         display: flex;
 		top:0;
