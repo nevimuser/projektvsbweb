@@ -210,6 +210,10 @@ nav {
 	nav{
 		height: 45px;
 	}
+	  #ad-left,
+    #ad-right {
+        display: none;
+    }
 
             .bar {
                 width: 25px;

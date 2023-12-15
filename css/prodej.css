@@ -182,7 +182,10 @@ input[type="submit"]:hover {
     max-width: 600px;
     background-color: white;
 }
-	
+    #ad-left,
+    #ad-right {
+        display: none;
+    }
     .burger {
         display: flex;
 		top:0;
